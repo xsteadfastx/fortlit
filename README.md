@@ -1,6 +1,8 @@
 fortlit
 =======
 
+[![Build Status](https://travis-ci.org/xsteadfastx/fortlit.svg?branch=master)](https://travis-ci.org/xsteadfastx/fortlit)
+
 A fortune like program that displays a quote from literature where the actual time is mentioned.
 
 Inspired from the [E-reader clock](https://www.instructables.com/id/Literary-Clock-Made-From-E-reader/) project from [Jaap Meijers](http://www.eerlijkemedia.nl/).
