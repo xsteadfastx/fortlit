@@ -1,0 +1,18 @@
+language: python
+matrix:
+  include:
+    - python: '3.6'
+      env: TOXENV=py36
+    - python: '3.6'
+      env: TOXENV=flake8
+    - python: '3.6'
+      env: TOXENV=pylint
+    - python: '3.6'
+      env: TOXENV=mypy
+    - python: '3.6'
+      env: TOXENV=pex
+install:
+  - travis_retry pip install pipenv
+script:
+  - pipenv install --dev
+  - pipenv run tox -v
