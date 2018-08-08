@@ -1,18 +1,28 @@
 language: python
 matrix:
   include:
-    - python: '3.6'
-      env: TOXENV=py36
-    - python: '3.6'
-      env: TOXENV=flake8
-    - python: '3.6'
-      env: TOXENV=pylint
-    - python: '3.6'
-      env: TOXENV=mypy
-    - python: '3.6'
-      env: TOXENV=pex
+  - python: '3.6'
+    env: TOXENV=py36
+  - python: '3.6'
+    env: TOXENV=flake8
+  - python: '3.6'
+    env: TOXENV=pylint
+  - python: '3.6'
+    env: TOXENV=mypy
+  - python: '3.6'
+    env: TOXENV=pex
 install:
-  - travis_retry pip install pipenv
+- travis_retry pip install pipenv
 script:
-  - pipenv install --dev
-  - pipenv run tox -v
+- pipenv install --dev
+- pipenv run tox -v
+deploy:
+  provider: releases
+  api_key:
+    secure: JmcFTgR58BNLkDon401D6j8FFCt61/KjJMsuqqgT8N86myxHhiKxxmMwwajh+op7uYt0D7KZD1/0Rxr3bhyFfH7C0j+66K+0jXq1PFY3jAQN6pNcUzeXHoRucDEG9D+vdZRI7thl+lEHE8sdm6pm+hkr/rVg+3MYNBGvlcbxBGdmWKZk+5LjccqnXeQgm7j4tXGBgRDmTpGtFVcPeQuacGOJU6NprKAXCRvNttH8J3Fc1cIYNdWwr4Lb2Xmsg5kSjDvF/g/38ciQAO3X3mwfR1dCQDkPoJLDVRoQzffuul+F2FiMf3rfV3QVvukOnRow7kVKJ6YT303X4mrYStaYy9zqMKv2A2r/rlboQiKAFpOZwdvpDul+dT18T6g6VzkNCkCcrnL2uDjDwgoCl9cyd3pYh0UfHh/wF1GfhzFKR8+niYjk9yCCN1goci24ia12M2d5KNlkqlovrNvoU+VzRh8lDL0Fo0HW637Je+vDtQJVDhSre8PMUBrZWcTilCHkQdtHQD1RXIqYd+ORpY5jDU05s3VMymCYay6sZhFnCdpvR6Kl/gUaI4RGAbG6nhMWzXbZmRBWPX6e9KVNl5eAPyI8RZktuoTwQahDTF3FnpYkG7g2OJ3e41smNWT4cbLy5iRmhEKPP14/YcoszhmN+GzNVVuIJjpO+Cn3iGDj6wk=
+  file_glob: true
+  file: dist/fortlit-*.pex
+  skip_cleanup: true
+  on:
+    tags: true
+    condition: $TOXENV = "pex"

@@ -13,6 +13,12 @@ or
 
 `pipsi install git+https://github.com/xsteadfastx/fortlit.git#egg=fortlit`
 
+or
+
+1. Be sure you have Python 3.6 installed
+2. Download pex file from [release](https://github.com/xsteadfastx/fortlit/releases)
+3. Move it to a place in your `$PATH`
+
 ### Fish Shell
 
 i have this in my `~/.config/fish/config.fish`:
