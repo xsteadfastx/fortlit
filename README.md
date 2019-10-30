@@ -2,6 +2,7 @@ fortlit
 =======
 
 [![Build Status](https://cloud.drone.io/api/badges/xsteadfastx/fortlit/status.svg)](https://cloud.drone.io/xsteadfastx/fortlit)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
 A fortune like program that displays a quote from literature where the actual time is mentioned.
 
