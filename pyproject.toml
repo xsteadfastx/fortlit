@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "fortlit"
-version = "1.0.0"
+version = "1.0.1"
 description = "A fortune like program that displays a quote from literature where the actual time is mentioned."
 authors = ["Marvin Steadfast <marvin@xsteadfastx.org>"]
 readme = "README.md"
