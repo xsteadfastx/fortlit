@@ -1,10 +1,10 @@
-.PHONY: all clean clean_temp_files clean_dirs test init
+.PHONY: all clean clean_temp_files clean_dirs test init shiv
 
 init:
-	pipenv install --dev --python 3.6.6
+	poetry install -v
 
 test:
-	pipenv run tox -r
+	poetry run tox
 
 clean_temp_files:
 	find . -name '*.pyc' -delete
@@ -19,3 +19,8 @@ clean_dirs:
 	rm -rf .pytest_cache
 
 clean: clean_temp_files clean_dirs
+
+shiv:
+	mkdir -p dist/
+	poetry run tox -e shiv-py36
+	poetry run tox -e shiv-py37
