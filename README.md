@@ -1,7 +1,7 @@
 fortlit
 =======
 
-[![Build Status](https://travis-ci.org/xsteadfastx/fortlit.svg?branch=master)](https://travis-ci.org/xsteadfastx/fortlit)
+[![Build Status](https://cloud.drone.io/api/badges/xsteadfastx/fortlit/status.svg)](https://cloud.drone.io/xsteadfastx/fortlit)
 
 A fortune like program that displays a quote from literature where the actual time is mentioned.
 
@@ -17,8 +17,8 @@ or
 
 or
 
-1. Be sure you have Python 3.6 installed
-2. Download pex file from [release](https://github.com/xsteadfastx/fortlit/releases)
+1. Be sure you have Python 3.6  or Python 3.7 installed
+2. Download `pyz` file from [release](https://github.com/xsteadfastx/fortlit/releases)
 3. Move it to a place in your `$PATH`
 
 ### Fish Shell
